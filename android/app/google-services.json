@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "522102494059",
+    "project_id": "ragu-fire-flutter",
+    "storage_bucket": "ragu-fire-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522102494059:android:7cc7ef32eb8a14f451722e",
+        "android_client_info": {
+          "package_name": "ch.ragu.fireFlutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522102494059-ko54jsmk1q6kp9u2ghnre3v0hh9rtv1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNEetTaVunpmXxw0UiuMYjIXhWkAjJ97g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522102494059-ko54jsmk1q6kp9u2ghnre3v0hh9rtv1a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "522102494059-louajk51o1crg755pqouk0jb2kmun8tn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ch.ragu.fire-flutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
