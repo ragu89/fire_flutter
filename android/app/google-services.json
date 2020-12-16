@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "522102494059-sue8k3fij12vncp6da8omm6i9sg0qb6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.ragu.fireFlutter",
+            "certificate_hash": "8bdd37b1fea93d21c2882be06051d4317fa11326"
+          }
+        },
+        {
           "client_id": "522102494059-ko54jsmk1q6kp9u2ghnre3v0hh9rtv1a.apps.googleusercontent.com",
           "client_type": 3
         }
