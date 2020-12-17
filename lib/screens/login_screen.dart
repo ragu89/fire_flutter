@@ -1,5 +1,6 @@
 import 'package:fire_flutter/model/local_auth_credential.dart';
 import 'package:fire_flutter/repository/auth_repository.dart';
+import 'package:fire_flutter/screens/documents_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -23,7 +24,24 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     if (_user != null) {
-      return Center(child: Text("Welcome aboard ${_user.displayName} !"));
+      return Center(
+          child: Column(
+        children: [
+          Spacer(),
+          Text("Welcome aboard ${_user.displayName} !"),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => new DocumentsScreen(),
+                  ));
+            },
+            child: Text("Open documents list"),
+          ),
+          Spacer(),
+        ],
+      ));
     } else if (_isLoaded == false) {
       return Center(child: CircularProgressIndicator());
     } else {
