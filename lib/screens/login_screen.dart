@@ -53,8 +53,13 @@ class _LoginScreenState extends State<LoginScreen> {
     var localAuthCredential = await _authRepository.getLocalAuthCredential();
     User user;
     if (localAuthCredential != null) {
-      var userCredential = await _signInWithGoogle(localAuthCredential);
-      user = userCredential.user;
+      try {
+        var userCredential = await _signInWithGoogle(localAuthCredential);
+        user = userCredential.user;
+        print("Signed id with user: $user");
+      } catch (e) {
+        print("Error when trying to sign in with google: $e");
+      }
     }
     setState(() {
       _user = user;
@@ -68,11 +73,18 @@ class _LoginScreenState extends State<LoginScreen> {
         setState(() {
           _isLoaded = true;
         });
-        var userCredential = await _signInWithGoogle(null);
-        print("Signed id with user: ${userCredential.user}");
+
+        User user;
+        try {
+          var userCredential = await _signInWithGoogle(null);
+          user = userCredential.user;
+          print("Signed id with user: $user");
+        } catch (e) {
+          print("Error when trying to sign in with google: $e");
+        }
 
         setState(() {
-          _user = userCredential?.user;
+          _user = user;
           _isLoaded = false;
         });
       },
